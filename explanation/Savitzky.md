@@ -126,8 +126,17 @@ Pole-zero diagrams were generated and compared against the unit circle to evalua
 #### Outputs
 
 - Figure 1b: Pole-Zero Plot (m = 5)
+
+<img width="543" height="517" alt="Screenshot 2026-06-21 at 1 29 33 PM" src="https://github.com/user-attachments/assets/34043caf-6d4d-4c86-b7e6-404286e0d094" />
+
 - Figure 2b: Pole-Zero Plot (m = 41)
+
+<img width="594" height="512" alt="Screenshot 2026-06-21 at 1 30 53 PM" src="https://github.com/user-attachments/assets/73a15dca-a976-4988-9fff-7f2de9c26402" />
+
 - Figure 3b: Pole-Zero Plot (m = 101)
+
+<img width="558" height="511" alt="Screenshot 2026-06-21 at 1 31 29 PM" src="https://github.com/user-attachments/assets/d95c6ce5-dc62-41d2-ac3d-8089203bb6bb" />
+
 
 ---
 
@@ -170,8 +179,16 @@ abs(H_total)
 #### Outputs
 
 - Figure 1c: DTFT Magnitude Plot (m = 5)
+
+<img width="861" height="520" alt="Screenshot 2026-06-21 at 1 29 59 PM" src="https://github.com/user-attachments/assets/706ce736-f15b-4b2a-8af4-852f861e0f1b" />
+
 - Figure 2c: DTFT Magnitude Plot (m = 41)
+
+<img width="799" height="519" alt="Screenshot 2026-06-21 at 1 31 05 PM" src="https://github.com/user-attachments/assets/b4ecf164-5e72-467b-917d-0fbf1630623d" />
+
 - Figure 3c: DTFT Magnitude Plot (m = 101)
+<img width="821" height="514" alt="Screenshot 2026-06-21 at 1 31 40 PM" src="https://github.com/user-attachments/assets/2217aaf4-3d5c-482c-a09a-de7d4bf5c2aa" />
+
 
 ---
 
@@ -233,17 +250,17 @@ Based on analysis of the DTFT magnitude responses:
 - Noticeable attenuation began around **2 Hz**
 - Frequencies above approximately **2 Hz** behaved as noise
 
-Given a sampling frequency of approximately **18 Hz**, the Nyquist frequency was:
+Given a sampling frequency of approximately **18 Hz**, Nyquist frequency was computed from the sampling rate:
 
-\[
-f_N = 9 \text{ Hz}
-\]
+f_N = f_s / 2 = 9 Hz
 
-Estimated noise range:
+From the DTFT magnitude response, most physiological breathing energy was concentrated below approximately 2 Hz. Frequencies above this range showed significantly reduced signal content and were treated as measurement noise.
 
-\[
-2 \text{ Hz} \leq f \leq 9 \text{ Hz}
-\]
+Therefore, the effective noise band was estimated as:
+
+2 Hz ≤ f ≤ 9 Hz
+
+where 9 Hz represents the Nyquist limit of the sampled system.
 
 The larger Savitzky-Golay windows effectively suppressed frequencies within this range while preserving the underlying breathing signal.
 
@@ -269,7 +286,6 @@ The larger Savitzky-Golay windows effectively suppressed frequencies within this
 |--------|------------|
 | `Savitzky_Golay_Filter_Analysis.m` | Main MATLAB script |
 | `my_breathing_data_x4.txt` | Breathing signal dataset |
-| `README.md` | Project documentation |
 | `Figure1a.png` | Impulse Response (m = 5) |
 | `Figure1b.png` | Pole-Zero Plot (m = 5) |
 | `Figure1c.png` | DTFT Magnitude Response (m = 5) |
