@@ -300,4 +300,4 @@ The larger Savitzky-Golay windows effectively suppressed frequencies within this
 
 ## Conclusion
 
-This project explored the behavior of Savitzky-Golay filters through time-domain and frequency-domain analysis. By computing impulse responses, pole-zero locations, and DTFT magnitude responses for multiple window lengths, the relationship between filter size, smoothing performance, and noise suppression was clearly demonstrated. The techniques implemented in this project are directly applicable to biomedical signal processing applications including respiratory monitoring, pulse oximetry, ECG filtering, and physiological data analysis.
+This project explored the behavior of Savitzky-Golay filters through time-domain and frequency-domain analysis. By computing impulse responses, pole-zero locations, and DTFT magnitude responses for multiple window lengths, the relationship between filter size, smoothing performance, and noise suppression was clearly demonstrated. 
