@@ -1,7 +1,7 @@
 # Savitzky-Golay Filter Analysis and DTFT Characterization
 
 ## Christian Abou-Ezzi
-### Biomedical Signal Processing Portfolio
+
 
 ---
 
@@ -85,8 +85,18 @@ stem(bound,h_n)
 #### Outputs
 
 - Figure 1a: h[n] for m = 5
+
+<img width="854" height="522" alt="Screenshot 2026-06-21 at 1 30 28 PM" src="https://github.com/user-attachments/assets/d465c306-499b-4c1a-9c6a-a77e1598bcf1" />
+
+
 - Figure 2a: h[n] for m = 41
+
+<img width="830" height="515" alt="Screenshot 2026-06-21 at 1 30 42 PM" src="https://github.com/user-attachments/assets/6cae4232-a58d-4d26-9dd5-ab76a11b9b6f" />
+
 - Figure 3a: h[n] for m = 101
+
+<img width="838" height="518" alt="Screenshot 2026-06-21 at 1 31 22 PM" src="https://github.com/user-attachments/assets/869ffbbb-1d27-47c8-8769-f1be4f64439c" />
+
 
 ---
 
