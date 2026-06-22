@@ -1,5 +1,5 @@
-%Question 3 Part B
-%number 1
+
+
 fsample = 3;
 w = [-pi:0.01:pi];
 Hw = (1*exp(1j*2*w)./((1*exp(1j*2*w))+(0.9*exp(1j*w)+0.81)));
@@ -52,7 +52,6 @@ set(gca, 'YTick', [-180:45:180]);
 xlabel('\omega (DFT domain)');
 ylabel('|angle(H(e^j^\omega))')
 %%
-%Question 3 part B number 4
 f_sample = 3;
 NO = 6;
 wo = 2*pi/NO;
@@ -67,7 +66,6 @@ H_cleaned = minreal(H1);
 my_poles1 = pole(H_cleaned);
 my_zeroes1 = zero(H_cleaned);
 %%
-%Question 3 part B number 5, 6, 7
 
 t_final = 2-1/f_sample;
 n = 0:5;
@@ -82,8 +80,6 @@ grid on
 
 disp('This filter is a high-pass filter')
 %%
-%Question 3 Part C
-%number 1
 clear all
 fsample = 3;
 w = [-pi:0.01:pi];
@@ -137,7 +133,6 @@ set(gca, 'YTick', [-180:45:180]);
 xlabel('\omega (DFT domain)');
 ylabel('|angle(H(e^j^\omega))')
 %%
-%Question 3 part C number 4
 f_sample = 3;
 NO = 6;
 wo = 2*pi/NO;
@@ -152,7 +147,6 @@ H_cleaned = minreal(H1);
 my_poles1 = pole(H_cleaned);
 my_zeroes1 = zero(H_cleaned);
 %%
-%Question 3 part C number 5, 6, 7
 
 t_final = 2-1/f_sample;
 n = 0:5;
@@ -167,8 +161,6 @@ grid on
 
 disp('This filter is a low-pass filter')
 %%
-%Question 3 Part D
-%number 1
 clear all
 fsample = 3;
 w = [-pi:0.01:pi];
@@ -222,7 +214,6 @@ set(gca, 'YTick', [-180:45:180]);
 xlabel('\omega (DFT domain)');
 ylabel('|angle(H(e^j^\omega))')
 %%
-%Question 3 part D number 4
 f_sample = 3;
 NO = 6;
 wo = 2*pi/NO;
@@ -237,7 +228,6 @@ H_cleaned = minreal(H1);
 my_poles1 = pole(H_cleaned);
 my_zeroes1 = zero(H_cleaned);
 %%
-%Question 3 part D number 5, 6, 7
 
 t_final = 2-1/f_sample;
 n = 0:5;
