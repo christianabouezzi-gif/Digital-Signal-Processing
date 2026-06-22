@@ -6,15 +6,11 @@ This project demonstrates the design and analysis of a digital bandpass filter c
 
 The objective was to create a bandpass response centered at:
 
-[
-\omega_{pass} = \frac{\pi}{3}
-]
+ωpass = π/3 radians/sample (60°)
 
 with a half-bandwidth spacing of:
 
-[
-\phi = 15^\circ
-]
+φ = 15°
 
 The design follows the classical comb-filter plus resonator architecture commonly used in digital signal processing for selective frequency enhancement.
 
@@ -26,21 +22,15 @@ The design follows the classical comb-filter plus resonator architecture commonl
 
 The comb filter creates equally spaced zeros around the unit circle:
 
-[
-H_1(z)=1-z^{-m}
-]
+H₁(z) = 1 − z⁻ᵐ
 
 where
 
-[
-m=\frac{360^\circ}{\phi}
-]
+m = 360° / φ
 
 Using a half-bandwidth spacing of 15°:
 
-[
-m=24
-]
+m = 24
 
 This produces 24 equally spaced zeros around the unit circle.
 
@@ -50,29 +40,19 @@ This produces 24 equally spaced zeros around the unit circle.
 
 A resonator was designed to place poles at the desired passband frequency:
 
-[
-\omega_{pass}=\frac{\pi}{3}
-]
+ωpass = π/3
 
 The poles are:
 
-[
-p_1=e^{j\omega_{pass}}
-]
+p₁ = e^(jωpass)
 
-[
-p_2=e^{-j\omega_{pass}}
-]
+p₂ = e^(-jωpass)
 
 which create resonance at the desired center frequency.
 
 The resonator transfer function is:
 
-[
-H_2(z)=
-\frac{1}
-{1-(p_1+p_2)z^{-1}+(p_1p_2)z^{-2}}
-]
+H₂(z) = 1 / [1 − (p₁ + p₂)z⁻¹ + (p₁p₂)z⁻²]
 
 ---
 
@@ -80,17 +60,14 @@ H_2(z)=
 
 The complete bandpass filter is formed by cascading the comb and resonator sections:
 
-[
-H(z)=H_1(z)H_2(z)
-]
+H(z) = H₁(z)H₂(z)
 
 The resulting pole-zero structure creates a strong passband around:
 
-[
-\omega=\frac{\pi}{3}
-]
+ω = π/3
 
 while attenuating other frequencies.
+
 
 ---
 
@@ -145,9 +122,7 @@ This provides a time-domain representation of the filter.
 
 The DTFT:
 
-[
-H(e^{j\omega})
-]
+H(e^(jω))
 
 is computed directly from the filter equation and compared with the DFT coefficients obtained using:
 
@@ -168,9 +143,7 @@ The filter exhibits a large peak gain due to the resonant poles.
 
 A gain correction factor is calculated:
 
-[
-G=\frac{1}{H_{peak}}
-]
+G = 1 / Hpeak
 
 and applied to both:
 
@@ -195,9 +168,8 @@ Shows:
 
 Displays the filter impulse response:
 
-[
+
 h[n]
-]
 
 for a 72-sample analysis window.
 
@@ -216,9 +188,7 @@ Shows the final bandpass response after applying the gain adjustment factor.
 
 The maximum gain is reduced to:
 
-[
-|H(e^{j\omega})|_{max}=1
-]
+|H(e^(jω))|max = 1
 
 while preserving the desired passband characteristics.
 
@@ -249,4 +219,3 @@ while preserving the desired passband characteristics.
 
 Christian Abou-Ezzi
 
-Biomedical Engineering | Digital Signal Processing | MATLAB Development
