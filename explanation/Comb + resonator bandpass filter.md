@@ -1,3 +1,4 @@
+
 # Comb Filter and Resonator Bandpass Filter Design Using MATLAB
 
 ## Overview
@@ -158,6 +159,9 @@ to normalize the maximum gain to unity.
 
 ### Figure 0 – Pole-Zero Plot
 
+<img width="606" height="523" alt="Screenshot 2026-06-22 at 2 45 01 PM" src="https://github.com/user-attachments/assets/86710468-6603-4a1f-9f9d-d1d52ad313d3" />
+
+
 Shows:
 
 * Comb-filter zeros equally spaced around the unit circle
@@ -168,12 +172,17 @@ Shows:
 
 Displays the filter impulse response:
 
+<img width="807" height="524" alt="Screenshot 2026-06-22 at 2 45 16 PM" src="https://github.com/user-attachments/assets/ba3809ed-49aa-4ff5-8e80-e5bbc7e755e9" />
+
 
 h[n]
 
 for a 72-sample analysis window.
 
 ### Figure 2 – Unnormalized Frequency Response
+
+<img width="801" height="520" alt="Screenshot 2026-06-22 at 2 45 28 PM" src="https://github.com/user-attachments/assets/3e4f46d3-6b4d-4de3-8efa-327e8de1e4b8" />
+
 
 Shows:
 
@@ -183,6 +192,9 @@ Shows:
 before gain correction.
 
 ### Figure 3 – Gain-Normalized Frequency Response
+
+<img width="807" height="513" alt="Screenshot 2026-06-22 at 2 45 57 PM" src="https://github.com/user-attachments/assets/a364c07f-e20a-4d34-8299-fa6a19bd7960" />
+
 
 Shows the final bandpass response after applying the gain adjustment factor.
 
