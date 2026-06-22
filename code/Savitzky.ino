@@ -1,6 +1,4 @@
 %%
-%Question 2 part A
-%part2
 %the calculated time tick mark width
 time_tick = time(3)-time(2);
 %fsample is just the inverse of the delta t.
@@ -8,7 +6,6 @@ fsample = 1/time_tick;
 time_tick
 fsample
 %%
-%question 2 part a number 2, finding our h[n]
 
 %set up for substitution
 syms n
@@ -44,7 +41,6 @@ for v = 1:length(m)
     h_n{v} = B{v}(1,:);
 end
 %%
-%question 2 part A number 3
 figure
 H_n_stem = stem(bound{1},h_n{1});
 title('Figure 1a: h[n] for m=5')
@@ -52,7 +48,6 @@ xlabel('n')
 ylabel('h[n]')
 set(H_n_stem, 'marker', 'o', 'Color', 'blue', 'MarkerSize', 12, 'Linewidth', 2);
 %%
-%Question 2 part A number 4,5,6,7
 %defining delta T
 deltaT = 1/18;
 %evaluating the smapling freq
@@ -172,7 +167,8 @@ set(f45deg_plothandle, 'Color', 'none');
 ax1;
 title('Figure 1c: DTFT magnitude plot (m=5)')
 %%
-%Question 2 part B, m = 41
+    
+% m = 41
 figure
 H_n_stem = stem(bound{2},h_n{2});
 title('Figure 2a: h[n] for m=41')
@@ -301,7 +297,7 @@ title('Figure 2c: DTFT magnitude plot (m=41)')
 
 
 %%
-%Question 2 part c, m = 101
+%m = 101
 figure
 H_n_stem = stem(bound{3},h_n{3});
 title('Figure 3a: h[n] for m=101')
