@@ -12,8 +12,17 @@ This project investigated the behavior of Savitzky-Golay (SG) smoothing filters 
 The analysis was performed for three different window lengths:
 
 - **m = 5**
+
+  <img width="837" height="522" alt="Screenshot 2026-06-21 at 9 59 30 PM" src="https://github.com/user-attachments/assets/c932f871-ba25-45d7-b368-804a76f07c2b" />
+
 - **m = 41**
+
+  <img width="830" height="518" alt="Screenshot 2026-06-21 at 9 59 37 PM" src="https://github.com/user-attachments/assets/cf0aadf5-8dfb-40a0-8487-d86934de953c" />
+
 - **m = 101**
+
+  <img width="837" height="512" alt="Screenshot 2026-06-21 at 9 59 44 PM" src="https://github.com/user-attachments/assets/51d51503-3f94-479b-8a5f-bd82953eb136" />
+
 
 For each filter configuration, the impulse response `h[n]`, transfer function `H(z)`, pole-zero plot, and Discrete-Time Fourier Transform (DTFT) magnitude response were computed and visualized.
 
