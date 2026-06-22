@@ -53,6 +53,7 @@ audioinfo('mac_farm copy.wav')
 
 ## Part 1: Spectrogram Generation
 
+
 A spectrogram is created by dividing the audio into short time slices and computing the FFT of each slice.
 
 ### Windowing Method
@@ -86,6 +87,9 @@ S_db = 20*log10(abs(spectrogram_matrix));
 ### Output Figure
 
 **Engineer's DFT Spectrogram of Old MacDonald**
+
+<img width="797" height="514" alt="Screenshot 2026-06-22 at 3 12 36 PM" src="https://github.com/user-attachments/assets/1843900f-b931-4cba-a07e-e088f7832c6a" />
+
 
 Shows:
 
@@ -225,6 +229,9 @@ abs(H(e^jw))
 
 is plotted across the full frequency range.
 
+<img width="801" height="519" alt="Screenshot 2026-06-22 at 3 13 00 PM" src="https://github.com/user-attachments/assets/1c12aa9a-6e42-4e8c-9c61-e0edba65b271" />
+
+
 This plot verifies:
 
 * Passband location
@@ -238,6 +245,9 @@ The response is also displayed in decibel form:
 ```matlab
 20*log10(abs(H(e^jw)))
 ```
+
+<img width="838" height="520" alt="Screenshot 2026-06-22 at 3 13 11 PM" src="https://github.com/user-attachments/assets/70a635a2-301a-41a9-a7a9-3fe2306b5fed" />
+
 
 This view reveals:
 
@@ -295,6 +305,9 @@ The output signal contains primarily frequency components near 400 Hz.
 
 ## Input vs Output Comparison
 
+<img width="804" height="516" alt="Screenshot 2026-06-22 at 3 13 38 PM" src="https://github.com/user-attachments/assets/2db36c67-f33f-47eb-b642-61f5b8e11e21" />
+
+
 A stem plot compares:
 
 * Original audio signal
@@ -312,6 +325,10 @@ This visualization highlights the attenuation introduced by the filter.
 ## Output Spectrogram Analysis
 
 The filtered signal is processed using the same spectrogram parameters as the original audio.
+
+
+<img width="822" height="518" alt="Screenshot 2026-06-22 at 3 13 54 PM" src="https://github.com/user-attachments/assets/ef38b275-7c17-4e02-acd5-185a7d360450" />
+
 
 The resulting dB-scale spectrogram reveals:
 
