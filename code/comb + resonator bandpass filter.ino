@@ -1,34 +1,33 @@
 %%
 
-%Question 2
-%Part A number one
+
 %the 1/2 bandwidth spacing
 phi = 15;
 %total number of zeros for the comb
 m = 360/phi;
 
-%Part A number 2
+
 %Defining the comb's H1(z)
 H1z_numerator = [ 1 zeros(1,m-1) -1];
 H1z_denominator =  [ 1 ];
 
-%Part A question 3
+
 %coding the 2 poles of the resonant filter
 w_pass = (pi/3);
 p1 = 1 * exp(1i * w_pass);
 p2 = 1 * exp(-1i * w_pass);
 
-%Part A question 4
+
 %defining the resonator's H2(z)
 H2z_numerator = [1];
 H2z_denominator = [1 -(p1+p2) (p1*p2)];
 
-%Part A question 5
+
 %defining the overall filter H(z)
 Hz_numerator = conv(H1z_numerator, H2z_numerator);
 Hz_denominator = conv(H1z_denominator,H2z_denominator);
 
-%Part A question 6
+
 %Find poles and zeros of H(z)
 my_zeros = roots(Hz_numerator);
 my_poles = roots(Hz_denominator);
@@ -60,7 +59,6 @@ xlabel('Real(z)')
 ylabel('Imagnary(z)')
 
 %%
-%question 2 Part B
 %inputs
 fsample = 24;
 N0 = 72;
@@ -73,11 +71,11 @@ w0 = 2*pi/N0;
 w=0:0.01:2*pi;
 f = fsample/2;
 
-%part B problem 1
+
 %computing the filter impulse response h[n], with length N0
 [h, n] = impz(Hz_numerator, Hz_denominator, N0);
 
-%part B problem 2
+
 %ploting the impusle response to see if we did it right
 figure
 stem(n, h, 'LineWidth', 2);
@@ -87,11 +85,11 @@ title('Impulse Response h[n]');
 grid on;
 title('Figure 1: h[n] for our total filter')
 %%
-%part B Problem 3
+
 %getting the DFT of our h[n]
 H_k = fft(h);
 
-%part B probelm 5
+
 z = exp(j*w);
 m = 24;
 numerator = (1-z.^(-m));
@@ -122,15 +120,13 @@ legend('|H(e^j^w)|', 'h[n]');
 title('The DFTF |H(e^j^w)| for the bandpass filter')
 
 %%
-%Question 2 Part B number 6
+
 %finding gain 
 echo on
 G = 1/(abs(max(H_k)));
 echo off
 
 %%
-%question 2 Part B number 7
-%part B probelm 5
 z = exp(j*w);
 m = 24;
 numerator = (1-z.^(-m));
