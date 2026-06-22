@@ -58,13 +58,13 @@ fs = 3 Hz
 
 ### Figure 1: DTFT Magnitude and Phase Response
 
-INSERT IMAGE HERE
 
 ```md
-![Figure 1](figures/Figure1.png)
+<img width="767" height="267" alt="Screenshot 2026-06-21 at 10 11 49 PM" src="https://github.com/user-attachments/assets/ea19fa6a-5631-4c2f-bdbe-b6f8c86324ef" />
+
 ```
 
-The top subplot displays the DTFT magnitude response while the lower subplot shows the phase response.
+The plot displays the DTFT magnitude response.
 
 ---
 
@@ -92,10 +92,11 @@ zero(H_cleaned)
 
 ### Figure 2: Impulse Response
 
-INSERT IMAGE HERE
+
 
 ```md
-![Figure 2](figures/Figure2.png)
+<img width="778" height="231" alt="Screenshot 2026-06-21 at 10 11 57 PM" src="https://github.com/user-attachments/assets/4ed88cf8-c8e6-4a64-a21f-6ba16766de32" />
+
 ```
 
 The impulse response was generated using:
@@ -133,10 +134,11 @@ This structure contains two zeros on the unit circle and exhibits finite impulse
 
 ### Figure 3: DTFT Magnitude and Phase Response
 
-INSERT IMAGE HERE
+
 
 ```md
-![Figure 3](figures/Figure3.png)
+<img width="765" height="273" alt="Screenshot 2026-06-21 at 10 12 10 PM" src="https://github.com/user-attachments/assets/6c94d858-ed8d-4949-9393-bd68d8061e3e" />
+
 ```
 
 The magnitude response shows strong attenuation at higher frequencies while preserving low-frequency components.
@@ -157,10 +159,11 @@ Because the denominator contains no feedback terms, the system is FIR.
 
 ### Figure 4: Impulse Response
 
-INSERT IMAGE HERE
+
 
 ```md
-![Figure 4](figures/Figure4.png)
+<img width="776" height="224" alt="Screenshot 2026-06-21 at 10 12 22 PM" src="https://github.com/user-attachments/assets/572d6c54-97a9-4865-925f-f050f49b966c" />
+
 ```
 
 ### Interpretation
@@ -198,10 +201,11 @@ This structure combines:
 
 ### Figure 5: DTFT Magnitude and Phase Response
 
-INSERT IMAGE HERE
+
 
 ```md
-![Figure 5](figures/Figure5.png)
+<img width="750" height="268" alt="Screenshot 2026-06-21 at 10 12 37 PM" src="https://github.com/user-attachments/assets/7ddb561d-6495-4645-b315-3f3be7f32d7d" />
+
 ```
 
 Distinct frequency rejection regions appear where zeros and poles interact.
@@ -222,10 +226,11 @@ Pole and zero locations were extracted and compared against previous filter desi
 
 ### Figure 6: Impulse Response
 
-INSERT IMAGE HERE
+
 
 ```md
-![Figure 6](figures/Figure6.png)
+<img width="771" height="229" alt="Screenshot 2026-06-21 at 10 12 44 PM" src="https://github.com/user-attachments/assets/de3fba2e-a38e-4ea3-87e8-2e64e2dcc3c2" />
+
 ```
 
 The impulse response demonstrates the combined FIR/IIR characteristics of the notch filter.
