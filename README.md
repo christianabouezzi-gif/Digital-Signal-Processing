@@ -1,478 +1,389 @@
 # Digital Signal Processing Portfolio
 
 ### Christian Abou-Ezzi
-Biomedical Engineer | Signal Processing | MATLAB
+
+Biomedical Engineering | MATLAB | Digital Signal Processing
 
 ---
 
 ## Overview
 
-This repository contains a collection of Digital Signal Processing (DSP) projects completed using MATLAB. The projects focus on filter design, spectral analysis, audio processing, and image filtering techniques commonly used in biomedical engineering and signal processing applications.
+This repository contains a collection of Digital Signal Processing (DSP) projects completed in MATLAB. The projects explore signal filtering, spectral analysis, audio reconstruction, and two-dimensional frequency-domain image processing. Together, they demonstrate practical applications of FIR and IIR filter design, z-domain analysis, FFT-based processing, and digital system implementation.
 
-The portfolio includes:
+## Topics Covered
 
-1. Savitzky-Golay Signal Smoothing Filter
-2. Notch Filter Design
-3. Comb + Resonator Bandpass Filter
-4. Comb + Resonator Audio Recovery
-5. Butterworth Filter Design
-6. Chebyshev Filter Design
-7. Audio Treasure Hunt
-8. cheby + Butterworth 2D Image Filter
+* Savitzky-Golay Filtering
+* Notch Filter Design
+* Comb Filters
+* Resonator Filters
+* Bandpass Filter Design
+* Butterworth Filters
+* Chebyshev Filters
+* Audio Signal Recovery
+* Spectrogram Analysis
+* 2D Frequency-Domain Image Filtering
 
 ---
 
-# Project 1 — Savitzky-Golay Signal Smoothing Filter
+# Project 1: Savitzky-Golay Signal Smoothing
 
 ## Objective
 
-Design and analyze a Savitzky-Golay filter for denoising physiological breathing data while preserving the underlying signal shape.
+Design and analyze a Savitzky-Golay FIR filter for denoising breathing data while preserving waveform characteristics.
 
-## Methods
+## Method
 
-- Third-order polynomial fitting
-- Sliding window least-squares approximation
-- FIR filter coefficient derivation
-- DTFT analysis
+Third-order polynomial fitting was performed over moving windows of varying lengths:
 
-Window sizes analyzed:
+* m = 5
+* m = 41
+* m = 101
 
-- m = 5
-- m = 41
-- m = 101
+The resulting FIR filter coefficients were derived using least-squares estimation and analyzed in both the time and frequency domains.
 
 ## Results
 
-- Small windows preserved detail but retained noise.
-- Larger windows increased smoothing.
-- m = 101 produced the smoothest breathing signal.
+Increasing window size improved noise suppression while preserving the overall breathing trend. The largest window produced the smoothest output signal.
 
 ## Figures
 
-### Raw Breathing Data
+### Figure 1 – Raw Breathing Signal
 
-![Raw Signal](images/sg/raw_signal.png)
+<img width="830" height="518" alt="Screenshot 2026-06-23 at 6 53 48 PM" src="https://github.com/user-attachments/assets/a376002d-2d04-4b8b-829f-daa5317055b4" />
 
-### Smoothed Signal Comparison
 
-![Smoothed Signals](images/sg/smoothing_comparison.png)
+### Figure 2 – Smoothed Signals
 
-### Impulse Response
+m = 5
 
-![Impulse Response](images/sg/impulse_response.png)
+<img width="837" height="522" alt="610939695-c932f871-ba25-45d7-b368-804a76f07c2b" src="https://github.com/user-attachments/assets/5c1c9370-64cf-4176-9a1d-83085852b97e" />
 
-### DTFT Magnitude and Phase
+m = 41
 
-![DTFT Response](images/sg/dtft_response.png)
+<img width="830" height="518" alt="610939720-cf0aadf5-8dfb-40a0-8487-d86934de953c" src="https://github.com/user-attachments/assets/88659ec7-9a79-4ef9-bce6-8f005d5f0caf" />
+
+
+m = 101
+
+<img width="837" height="512" alt="610939748-51d51503-3f94-479b-8a5f-bd82953eb136" src="https://github.com/user-attachments/assets/e780f1ae-41ee-4cc7-8443-7c23135044d0" />
+
+
+### Figure 3 – Impulse Response
+
+<img width="838" height="518" alt="Screenshot 2026-06-21 at 1 31 22 PM" src="https://github.com/user-attachments/assets/f9aa1265-ada6-41b6-950e-807c8fb3c689" />
+
+### Figure 4 - Pole-Zero plot
+
+<img width="558" height="511" alt="Screenshot 2026-06-21 at 1 31 29 PM" src="https://github.com/user-attachments/assets/99b05c9a-8dc3-4b66-b411-a4e49d944fb2" />
+
+
+### Figure 5 – DTFT Magnitude and Phase Response
+
+<img width="821" height="514" alt="Screenshot 2026-06-21 at 1 31 40 PM" src="https://github.com/user-attachments/assets/5b98b2a7-30d4-4510-af75-4c20dc8ba2b9" />
+
 
 ---
 
-# Project 2 — Notch Filter Design
+# Project 2: Notch Filter Design
 
 ## Objective
 
-Remove a narrowband interference component using a pole-zero notch filter.
+Design a narrowband notch filter capable of removing a specific interference frequency while preserving the remaining signal content.
 
-## Methods
+## Method
 
-- Pole-zero placement
-- Unit circle analysis
-- Frequency-selective attenuation
-
-Transfer Function:
-
-\[
-H(z)=
-\frac{(1-e^{j\omega_0}z^{-1})(1-e^{-j\omega_0}z^{-1})}
-{(1-re^{j\omega_0}z^{-1})(1-re^{-j\omega_0}z^{-1})}
-\]
+Zeros were placed directly on the unit circle at the interference frequency while poles were positioned nearby to control notch bandwidth.
 
 ## Results
 
-- Interference frequency removed.
-- Desired signal preserved.
-- Stable filter implementation.
+The interference component was successfully removed with minimal distortion to the desired signal.
 
 ## Figures
 
-### Pole-Zero Plot
+### Figure 1 — Notch Filter Magnitude & Phase Response
 
-![Pole Zero Plot](images/notch/pole_zero.png)
+<img width="750" height="268" alt="Screenshot 2026-06-21 at 10 12 37 PM" src="https://github.com/user-attachments/assets/8cecdf33-fde5-4c77-9925-a1623eb7ae27" />
 
-### Magnitude Response
 
-![Magnitude Response](images/notch/magnitude.png)
+### Figure 2 — Notch Filter Impulse Response
 
-### Phase Response
+<img width="771" height="229" alt="Screenshot 2026-06-21 at 10 12 44 PM" src="https://github.com/user-attachments/assets/198aff6a-0e32-4d72-bed3-5126ec2a7b2e" />
 
-![Phase Response](images/notch/phase.png)
 
-### Filtered Signal
-
-![Filtered Signal](images/notch/output.png)
 
 ---
 
-# Project 3 — Comb + Resonator Bandpass Filter
+# Project 3: Comb + Resonator Bandpass Filter
 
 ## Objective
 
-Construct a narrowband bandpass filter using a comb filter and a resonator.
+Create a narrowband bandpass filter using a comb filter and second-order resonator.
 
-## Design Equations
+## Design
 
 Comb Filter:
 
-\[
+$$
 H_1(z)=1-z^{-24}
-\]
+$$
 
 Resonator:
 
-\[
-H_2(z)=
-\frac{1}
-{1-2\cos(\omega_p)z^{-1}+z^{-2}}
-\]
-
-Combined Filter:
-
-\[
-H(z)=H_1(z)H_2(z)
-\]
-
-where
-
-\[
-\omega_p=\frac{\pi}{3}
-\]
-
-## Results
-
-- Harmonic frequencies rejected.
-- Desired passband amplified.
-- High selectivity achieved.
-
-## Figures
-
-### Pole-Zero Plot
-
-![Pole Zero Plot](images/bandpass/pole_zero.png)
-
-### Comb Filter Response
-
-![Comb Response](images/bandpass/comb_response.png)
-
-### Resonator Response
-
-![Resonator Response](images/bandpass/resonator_response.png)
-
-### Combined Response
-
-![Combined Response](images/bandpass/combined_response.png)
-
----
-
-# Project 4 — Comb + Resonator Audio Recovery
-
-## Objective
-
-Recover a desired audio signal embedded within multiple frequency components.
-
-## Methods
-
-- FFT analysis
-- Bandpass filtering
-- Audio reconstruction
-
-## Results
-
-- Desired tone isolated.
-- Background frequencies attenuated.
-- Improved audio clarity.
-
-## Figures
-
-### Original Spectrum
-
-![Original Spectrum](images/audio_recovery/original_fft.png)
-
-### Filter Response
-
-![Filter Response](images/audio_recovery/filter_response.png)
-
-### Filtered Spectrum
-
-![Filtered Spectrum](images/audio_recovery/filtered_fft.png)
-
-### Recovered Audio
-
-![Recovered Audio](images/audio_recovery/recovered_waveform.png)
-
----
-
-# Project 5 — Butterworth Filter Design
-
-## Objective
-
-Design a digital Butterworth low-pass filter from passband and stopband specifications.
-
-## Specifications
-
-Passband Edge:
-
-\[
-f_p=5000\ Hz
-\]
-
-Stopband Edge:
-
-\[
-f_s=8000\ Hz
-\]
-
-Passband Gain:
-
-\[
-G_p=0.9
-\]
-
-Stopband Gain:
-
-\[
-G_s=0.01
-\]
-
-## Design Procedure
-
-1. Frequency prewarping
-2. Analog prototype design
-3. Filter order calculation
-4. Pole computation
-5. Bilinear transform
-
-## Results
-
-- Flat passband
-- Stable implementation
-- Strong stopband attenuation
-
-## Figures
-
-### Pole Locations
-
-![Poles](images/butterworth/poles.png)
-
-### Magnitude Response
-
-![Magnitude](images/butterworth/magnitude.png)
-
-### Phase Response
-
-![Phase](images/butterworth/phase.png)
-
-### Audio Comparison
-
-![Audio Comparison](images/butterworth/audio_comparison.png)
-
----
-
-# Project 6 — Chebyshev Filter Design
-
-## Objective
-
-Design a Chebyshev low-pass filter with a sharper transition region than the Butterworth design.
-
-## Methods
-
-- Passband ripple specification
-- Pole calculation
-- Bilinear transform implementation
-
-## Results
-
-- Faster rolloff
-- Increased selectivity
-- Controlled passband ripple
-
-## Figures
-
-### Pole-Zero Plot
-
-![Pole Zero Plot](images/chebyshev/pole_zero.png)
-
-### Magnitude Response
-
-![Magnitude Response](images/chebyshev/magnitude.png)
-
-### Ripple Analysis
-
-![Ripple Analysis](images/chebyshev/ripple.png)
-
-### Butterworth Comparison
-
-![Comparison](images/chebyshev/comparison.png)
-
----
-
-# Project 7 — Audio Treasure Hunt
-
-## Objective
-
-Recover hidden information embedded within an audio recording using frequency-domain analysis.
-
-## Methods
-
-- FFT analysis
-- Frequency identification
-- Successive filtering stages
-- Signal reconstruction
-
-## Results
-
-- Hidden frequencies identified.
-- Embedded audio recovered.
-- Successful spectral extraction.
-
-## Figures
-
-### Original Audio
-
-![Original Audio](images/treasure_hunt/original_audio.png)
-
-### FFT Spectrum
-
-![FFT Spectrum](images/treasure_hunt/fft.png)
-
-### Filtered Spectrum
-
-![Filtered Spectrum](images/treasure_hunt/filtered_fft.png)
-
-### Recovered Signal
-
-![Recovered Signal](images/treasure_hunt/recovered_signal.png)
-
----
-
-# Project 8 — Chubby Butterworth 2D Image Filter
-
-## Objective
-
-Design a two-dimensional Butterworth filter for image denoising and frequency-domain image enhancement.
-
-## Transfer Function
-
-\[
-H(\omega_m,\omega_n)=
-\frac{1}
-{1+\left(
-\frac{\sqrt{\omega_m^2+\omega_n^2}}
-{\omega_c}
-\right)^{2N}}
-\]
+$$
+H_2(z)=\frac{1}{1-2\cos(\omega_p)z^{-1}+z^{-2}}
+$$
 
 where:
 
-- \(N\) = Filter Order
-- \(\omega_c\) = Cutoff Frequency
+$$
+\omega_p=\frac{\pi}{3}
+$$
 
-## Methods
+Combined Filter:
 
-1. Compute 2D FFT
-2. Shift spectrum to center
-3. Apply Butterworth filter
-4. Perform inverse FFT
-5. Reconstruct image
+$$
+H(z)=H_1(z)H_2(z)
+$$
 
 ## Results
 
-- High-frequency noise reduced.
-- Image details preserved.
-- Smooth reconstruction obtained.
+The comb filter eliminated periodic frequencies while the resonator amplified the desired passband.
 
 ## Figures
 
-### Original Image
+### Figure 1 – Pole-Zero Plot
 
-![Original Image](images/butterworth2d/original.png)
+<img width="606" height="523" alt="Screenshot 2026-06-22 at 2 45 01 PM" src="https://github.com/user-attachments/assets/76528f80-4b0a-422f-9a1b-030c0e819139" />
 
-### FFT Spectrum
 
-![FFT Spectrum](images/butterworth2d/spectrum.png)
+### Figure 2 – Impulse Response of Total Filter
 
-### Butterworth Surface
+<img width="807" height="524" alt="Screenshot 2026-06-22 at 2 45 16 PM" src="https://github.com/user-attachments/assets/c5f84692-205d-44fe-8b98-440e491f030f" />
 
-![Butterworth Surface](images/butterworth2d/filter_surface.png)
 
-### Filtered Image
+### Figure 3 – Bandpass DTFT Response Before Gain Adjustment
 
-![Filtered Image](images/butterworth2d/filtered.png)
+<img width="801" height="520" alt="Screenshot 2026-06-22 at 2 45 28 PM" src="https://github.com/user-attachments/assets/cb9bd621-fab3-4e1d-87ff-68a24cb2d8fa" />
 
----
 
-# MATLAB Skills Demonstrated
+### Figure 4 – Bandpass DTFT Response after Gain Adjustment
 
-## Signal Processing
+<img width="807" height="513" alt="Screenshot 2026-06-22 at 2 45 57 PM" src="https://github.com/user-attachments/assets/be0e84ff-5dd3-402d-ae64-206cc486e709" />
 
-- FIR Filter Design
-- IIR Filter Design
-- DTFT Analysis
-- FFT Analysis
-- Spectrogram Analysis
-- Pole-Zero Analysis
-
-## Audio Processing
-
-- Noise Removal
-- Frequency Isolation
-- Audio Reconstruction
-- Hidden Signal Recovery
-
-## Image Processing
-
-- 2D FFT
-- Frequency-Domain Filtering
-- Image Enhancement
-- Butterworth Surface Design
-
-## Mathematical Techniques
-
-- Least Squares Optimization
-- Bilinear Transform
-- Analog-to-Digital Filter Conversion
-- Z-Transform Analysis
-- Frequency Response Modeling
 
 ---
 
-# Repository Structure
+# Project 4: Comb + Resonator Audio Recovery
 
-```text
-DSP-Portfolio/
-│
-├── Savitzky_Golay_Filter/
-├── Notch_Filter/
-├── Comb_Resonator_Bandpass/
-├── Audio_Recovery/
-├── Butterworth_Filter/
-├── Chebyshev_Filter/
-├── Audio_Treasure_Hunt/
-├── Butterworth_2D_Filter/
-│
-├── README.md
-│
-└── images/
-```
+## Objective
+
+Recover a desired audio component embedded within multiple frequencies.
+
+## Method
+
+The bandpass filter developed in Project 3 was applied to an audio recording. FFT analysis was used to observe spectral content before and after filtering.
+
+## Results
+
+The target frequency was isolated while surrounding components were attenuated.
+
+## Figures
+
+### Figure 1 – Original Audio Spectrum
+
+<img width="797" height="514" alt="Screenshot 2026-06-22 at 3 12 36 PM" src="https://github.com/user-attachments/assets/cbf0b678-391d-4f1e-9b89-62581d482492" />
+
+
+### Figure 2 – Input vs Filtered Output
+
+<img width="804" height="516" alt="Screenshot 2026-06-22 at 3 13 38 PM" src="https://github.com/user-attachments/assets/47c3e2cd-03a0-453d-9e7a-f39d00dbdb25" />
+
+
+### Figure 3 – Filtered Spectrogram
+
+<img width="822" height="518" alt="Screenshot 2026-06-22 at 3 13 54 PM" src="https://github.com/user-attachments/assets/fc4f4269-16b7-4f6f-8155-f742447b272f" />
+
 
 ---
 
-## Software
+# Project 5: Butterworth Filter Design
 
-- MATLAB
-- Signal Processing Toolbox
-- Audio Processing Toolbox
-- FFT Functions
-- Image Processing Toolbox
+## Objective
+
+Design a Butterworth low-pass filter meeting specified passband and stopband requirements.
+
+## Specifications
+
+* Passband Edge: 5 kHz
+* Stopband Edge: 8 kHz
+* Passband Gain: 0.9
+* Stopband Gain: 0.01
+
+## Method
+
+The design procedure included:
+
+1. Frequency prewarping
+2. Analog Butterworth prototype generation
+3. Pole calculation
+4. Bilinear transformation
+5. Digital implementation
+
+## Results
+
+The filter achieved a smooth passband with strong stopband attenuation.
+
+## Figures
+
+
+### Figure 1 – Laplace Pole Plot
+
+<img width="584" height="515" alt="Screenshot 2026-06-22 at 8 24 19 PM" src="https://github.com/user-attachments/assets/634071b1-02e2-4597-8244-02400028c81c" />
+
+
+### Figure 2 – Digital Pole-Zero Plot
+
+<img width="798" height="519" alt="Screenshot 2026-06-22 at 8 24 28 PM" src="https://github.com/user-attachments/assets/2005a952-ac39-43da-a8ab-30484a0af237" />
+
+
+### Figure 3 - DTFT Magnitude and Phase
+
+<img width="818" height="517" alt="Screenshot 2026-06-22 at 8 24 47 PM" src="https://github.com/user-attachments/assets/2db82fdf-ba8c-4760-9c73-a32793fb639f" />
+
+
+### Figure 4 - FDM Output Spectrogram
+
+<img width="829" height="515" alt="Screenshot 2026-06-22 at 8 25 53 PM" src="https://github.com/user-attachments/assets/831ea974-d7bf-4d65-8649-697a3533e37a" />
+
+
+---
+
+# Project 6: Chebyshev Filter Design
+
+## Objective
+
+Design a Chebyshev low-pass filter with improved transition-band performance.
+
+## Method
+
+A Chebyshev Type-I design was implemented using passband ripple specifications and bilinear transformation.
+
+## Results
+
+Compared to the Butterworth filter, the Chebyshev design achieved a steeper rolloff while introducing controlled passband ripple.
+
+## Figures
+
+### Figure 1 – Ideal Chebyshev Laplace Design
+
+<img width="826" height="516" alt="Screenshot 2026-06-22 at 9 05 38 PM" src="https://github.com/user-attachments/assets/50aed8da-13a5-4ee4-89d4-8d46da45865c" />
+
+### Figure 2 – Chebyshev Laplace Poles
+
+<img width="844" height="522" alt="Screenshot 2026-06-22 at 9 05 51 PM" src="https://github.com/user-attachments/assets/fe2a6ecf-bef1-41ad-9090-290206d2620e" />
+
+### Figure 3 – Digital Pole Zero Plot
+
+<img width="828" height="523" alt="Screenshot 2026-06-22 at 9 06 03 PM" src="https://github.com/user-attachments/assets/9e24e0bc-5bb4-4323-aa49-8514ede207d5" />
+
+
+### Figure 4 - DTFT Magnitude and Phase
+
+<img width="845" height="523" alt="Screenshot 2026-06-22 at 9 06 29 PM" src="https://github.com/user-attachments/assets/bd666b25-a240-40cc-ac09-b221cecc04ea" />
+
+---
+
+# Project 7: Audio Treasure Hunt
+
+## Objective
+
+Recover hidden audio information embedded within a complex recording.
+
+## Method
+
+FFT analysis and frequency-selective filtering techniques were used to isolate and reconstruct hidden audio content.
+
+## Results
+
+Embedded frequency components were successfully identified and recovered.
+
+## Figures
+
+### Figure - 1 Low Pass Pole Zero Plot
+
+<img width="837" height="517" alt="Screenshot 2026-06-23 at 5 06 26 PM" src="https://github.com/user-attachments/assets/0e9417f1-3b3c-456c-bc5f-6824435629eb" />
+
+
+### Figure 2 – Chebyshev Bandpass design
+
+<img width="819" height="512" alt="Screenshot 2026-06-23 at 5 07 30 PM" src="https://github.com/user-attachments/assets/273cbd95-fb3a-48fc-9597-abeb40484607" />
+
+
+### Figure 3 – Bandpass dB response
+
+<img width="807" height="505" alt="Screenshot 2026-06-23 at 5 07 38 PM" src="https://github.com/user-attachments/assets/3cc1ee2c-ec39-4239-aa56-5343c1528073" />
+
+
+### Figure 4 – Mystery Sound Spectrum
+
+<img width="858" height="517" alt="Screenshot 2026-06-23 at 5 07 59 PM" src="https://github.com/user-attachments/assets/ce8e480a-ea05-447d-8be0-1b86a9f738c0" />
+
+
+---
+
+# Project 8: Chubby Butterworth 2D Filter
+
+## Objective
+
+Design a two-dimensional Butterworth low-pass filter for image denoising and frequency-domain image enhancement.
+
+## Method
+
+The image was transformed using a 2D FFT. A Butterworth transfer function was applied in the frequency domain before reconstructing the filtered image through an inverse FFT.
+
+## Results
+
+High-frequency noise was suppressed while preserving image structure.
+
+## Figures
+
+### Figure 1 – 2D Butterworth Filter
+
+<img width="655" height="519" alt="Screenshot 2026-06-23 at 5 24 23 PM" src="https://github.com/user-attachments/assets/a98177da-9de8-4e8e-a25e-fc310e63a16f" />
+
+
+### Figure 2 – 2D Filtred Image Comparison
+
+<img width="1016" height="337" alt="Screenshot 2026-06-23 at 5 24 57 PM" src="https://github.com/user-attachments/assets/4ebfe03d-2ea1-4282-9f62-2d870664a265" />
+
+
+### Figure 3 – Butterworth Spectrum and Output
+
+
+<img width="1079" height="472" alt="Screenshot 2026-06-23 at 5 25 30 PM" src="https://github.com/user-attachments/assets/1f5c804e-9ef2-4edd-82bc-5eb0f1fe62c0" />
+
+
+---
+
+# Software
+
+* MATLAB
+* Signal Processing Toolbox
+* Image Processing Toolbox
+
+# Skills Demonstrated
+
+* FIR Filter Design
+* IIR Filter Design
+* Butterworth Design
+* Chebyshev Design
+* Pole-Zero Analysis
+* FFT Analysis
+* DTFT Analysis
+* Audio Reconstruction
+* Spectrogram Processing
+* Frequency-Domain Image Filtering
+* Digital Signal Analysis
 
 ---
 
@@ -482,4 +393,4 @@ DSP-Portfolio/
 
 Biomedical Engineering Portfolio
 
-Signal Processing • Audio Analysis • Digital Filter Design • MATLAB Development
+Digital Signal Processing • Audio Analysis • MATLAB Development • Filter Design
