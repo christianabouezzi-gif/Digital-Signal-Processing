@@ -127,8 +127,7 @@ A Chebyshev Type-I filter was designed using the same passband and stopband cons
 ## Ripple Parameter
 
 $$
-\epsilon
-=
+\epsilon=
 \sqrt{\frac{1}{0.85^2}-1}
 $$
 
@@ -137,8 +136,7 @@ $$
 ## Chebyshev Response
 
 $$
-H(\omega_m,\omega_n)
-=
+H(\omega_m,\omega_n)=
 \frac{1}
 {\sqrt{
 1+\epsilon^2
@@ -168,8 +166,7 @@ Characteristics:
 A Gaussian smoothing filter was implemented using
 
 $$
-H(\omega_m,\omega_n)
-=
+H(\omega_m,\omega_n) =
 e^{-\left(\frac{W}{\omega_p}\right)^2}
 $$
 
@@ -207,8 +204,7 @@ X = fftshift(fft2(x_double));
 Each filter was applied through direct multiplication:
 
 $$
-Y(\omega_m,\omega_n)
-=
+Y(\omega_m,\omega_n) =
 X(\omega_m,\omega_n)
 H(\omega_m,\omega_n)
 $$
