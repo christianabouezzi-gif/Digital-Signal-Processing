@@ -94,21 +94,21 @@ Digital-domain frequency specifications were converted into the Laplace domain u
 
 with
 
-[
+
 K = 2
-]
+
 
 to obtain:
 
-[
-\Omega_p
-]
+
+Omega_p
+
 
 and
 
-[
-\Omega_s
-]
+
+Omega_s
+
 
 ---
 
@@ -221,9 +221,8 @@ z=
 
 where:
 
-[
+
 K = 2
-]
 
 The resulting digital filter contains:
 
