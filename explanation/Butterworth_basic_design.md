@@ -109,7 +109,8 @@ G
 
 ## Figure 1 – CTFT Magnitude Response
 
-![Figure 1](images/Figure1_CTFT_Magnitude.png)
+<img width="820" height="516" alt="Screenshot 2026-06-22 at 8 23 19 PM" src="https://github.com/user-attachments/assets/ca988706-2c45-43ea-8859-424f99717b5b" />
+
 
 **Figure 1:** Gain-adjusted CTFT magnitude response.
 
@@ -142,7 +143,8 @@ Only poles in the left-half plane are retained to ensure stability.
 
 ## Figure 2 – Laplace Pole Plot
 
-![Figure 2](images/Figure2_Laplace_Poles.png)
+<img width="584" height="515" alt="Screenshot 2026-06-22 at 8 24 19 PM" src="https://github.com/user-attachments/assets/947021f0-f441-4f0f-b4f3-f6c7601c6655" />
+
 
 **Figure 2:** Butterworth poles in the s-plane.
 
@@ -180,7 +182,8 @@ The transformation generates:
 
 ## Figure 3 – Pole-Zero Plot
 
-![Figure 3](images/Figure3_Pole_Zero.png)
+<img width="798" height="519" alt="Screenshot 2026-06-22 at 8 24 28 PM" src="https://github.com/user-attachments/assets/00874a48-e7e7-4c72-89d1-57ef90ceeffb" />
+
 
 **Figure 3:** Pole-zero plot of the digital Butterworth filter.
 
@@ -206,7 +209,8 @@ The resulting sequence is used as the filtering kernel.
 
 ## Figure 4 – Impulse Response
 
-![Figure 4](images/Figure4_Impulse_Response.png)
+<img width="831" height="515" alt="Screenshot 2026-06-22 at 8 24 37 PM" src="https://github.com/user-attachments/assets/d8885aec-5045-4efd-a361-65e761f23020" />
+
 
 **Figure 4:** Butterworth low-pass filter impulse response.
 
@@ -243,7 +247,8 @@ Verification includes:
 
 ## Figure 5 – DTFT Magnitude and Phase
 
-![Figure 5](images/Figure5_DTFT_Response.png)
+<img width="818" height="517" alt="Screenshot 2026-06-22 at 8 24 47 PM" src="https://github.com/user-attachments/assets/2c705bfb-7392-4166-8377-b8bfbd88105a" />
+
 
 **Figure 5:** DTFT magnitude and phase response.
 
@@ -261,7 +266,8 @@ Verification includes:
 
 ## Figure 6 – Magnitude Response (dB)
 
-![Figure 6](images/Figure6_dB_Response.png)
+<img width="825" height="513" alt="Screenshot 2026-06-22 at 8 25 39 PM" src="https://github.com/user-attachments/assets/1008a049-62ac-4690-8441-458eda974500" />
+
 
 **Figure 6:** DTFT magnitude response in decibels.
 
@@ -332,7 +338,8 @@ A short-time Fourier transform approach is used to analyze the filtered audio.
 
 ## Figure 7 – Filtered Audio Spectrogram
 
-![Figure 7](images/Figure7_Filtered_Spectrogram.png)
+<img width="829" height="515" alt="Screenshot 2026-06-22 at 8 25 53 PM" src="https://github.com/user-attachments/assets/d6dd2b27-1939-47a5-91fc-748c365d9008" />
+
 
 **Figure 7:** Spectrogram of the recovered audio signal.
 
@@ -380,27 +387,5 @@ A higher-order Butterworth filter would introduce additional poles, producing a 
 - Frequency Domain Filtering
 - Spectrogram Generation
 - MATLAB Programming
-
----
-
-## Repository Structure
-
-```text
-Butterworth_Filter_Project/
-│
-├── Butterworth_Filter_Design.m
-├── Problem4_FDM_audio_input.wav
-├── FDM_lowpass_output.wav
-├── README.md
-│
-└── images/
-    ├── Figure1_CTFT_Magnitude.png
-    ├── Figure2_Laplace_Poles.png
-    ├── Figure3_Pole_Zero.png
-    ├── Figure4_Impulse_Response.png
-    ├── Figure5_DTFT_Response.png
-    ├── Figure6_dB_Response.png
-    └── Figure7_Filtered_Spectrogram.png
-```
 
 ---
