@@ -61,6 +61,7 @@ A two-dimensional low-pass filter suppresses high-frequency content while preser
 The frequency-domain radius was defined as
 
 $$
+
 W=\sqrt{\omega_m^2+\omega_n^2}
 $$
 
