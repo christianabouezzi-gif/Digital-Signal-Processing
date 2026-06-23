@@ -61,7 +61,6 @@ A two-dimensional low-pass filter suppresses high-frequency content while preser
 The frequency-domain radius was defined as
 
 $$
-
 W=\sqrt{\omega_m^2+\omega_n^2}
 $$
 
@@ -92,8 +91,7 @@ A Butterworth low-pass filter was designed using passband and stopband specifica
 ## Butterworth Transfer Function
 
 $$
-H(\omega_m,\omega_n)
-=
+H(\omega_m,\omega_n) =
 \frac{1}
 {\sqrt{1+\left(\frac{W}{\omega_p}\right)^{2N}}}
 $$
