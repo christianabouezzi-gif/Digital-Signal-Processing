@@ -254,7 +254,6 @@ The filtered signal was translated back to baseband using
 
 $$
 x_{dem}[n]
-
 $$
 
 $$
