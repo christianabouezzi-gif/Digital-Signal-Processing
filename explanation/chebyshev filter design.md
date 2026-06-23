@@ -2,7 +2,6 @@
 
 ### Christian Abou-Ezzi
 
-Digital Signal Processing (DSP) Portfolio Project
 
 ---
 
@@ -51,7 +50,7 @@ These functions demonstrate the oscillatory behavior responsible for the passban
 
 **Warm-up plot for Chebyshev polynomials**
 
-*Insert Figure 1 here*
+<img width="816" height="515" alt="Screenshot 2026-06-22 at 9 05 18 PM" src="https://github.com/user-attachments/assets/ee5a2d80-de6a-4a9e-a77f-b3715e33a50a" />
 
 ---
 
@@ -143,13 +142,15 @@ This order provided sufficient attenuation at the stopband edge frequency.
 
 **Theoretical Chebyshev response (N = 4)**
 
-*Insert Figure 2 (first plot) here*
+<img width="814" height="516" alt="Screenshot 2026-06-22 at 9 05 30 PM" src="https://github.com/user-attachments/assets/66d207c8-5a7a-4749-a309-a5aab370871c" />
+
 
 ### Figure 3
 
 **Final Chebyshev response (N = 6)**
 
-*Insert Figure 2 (second plot after redesign) here*
+<img width="826" height="516" alt="Screenshot 2026-06-22 at 9 05 38 PM" src="https://github.com/user-attachments/assets/ec1f3f8c-70c8-4633-a094-5f2491d88aea" />
+
 
 ---
 
@@ -191,7 +192,8 @@ and plotted in the Laplace domain.
 
 **Chebyshev poles in the Laplace domain**
 
-*Insert Figure 3 here*
+<img width="844" height="522" alt="Screenshot 2026-06-22 at 9 05 51 PM" src="https://github.com/user-attachments/assets/77930a9e-b4cf-4d05-bd5e-bb1415c2bebc" />
+
 
 ---
 
@@ -235,7 +237,8 @@ Polynomial coefficients were generated using MATLAB's `conv()` function.
 
 **Pole-zero plot of H(z)**
 
-*Insert Figure 4 here*
+<img width="828" height="523" alt="Screenshot 2026-06-22 at 9 06 03 PM" src="https://github.com/user-attachments/assets/f4163d17-f10a-426c-93d7-132797cc0f27" />
+
 
 ---
 
@@ -253,7 +256,8 @@ The resulting response demonstrates the behavior of the designed IIR filter in t
 
 **Impulse response h[n]**
 
-*Insert Figure 5 here*
+<img width="847" height="525" alt="Screenshot 2026-06-22 at 9 06 20 PM" src="https://github.com/user-attachments/assets/dc683e4d-bffd-4b1d-b0d0-b93cf58d10c9" />
+
 
 ---
 
@@ -289,7 +293,8 @@ The phase plot illustrates the nonlinear phase characteristics typical of IIR fi
 
 **DTFT magnitude and phase response**
 
-*Insert Figure 6 here*
+<img width="845" height="523" alt="Screenshot 2026-06-22 at 9 06 29 PM" src="https://github.com/user-attachments/assets/7f01564c-9508-45ec-aa60-7aa7629a9241" />
+
 
 ---
 
@@ -321,7 +326,8 @@ This plot verifies compliance with:
 
 **DTFT magnitude response in dB**
 
-*Insert Figure 7 here*
+<img width="840" height="523" alt="Screenshot 2026-06-22 at 9 06 38 PM" src="https://github.com/user-attachments/assets/30cfe235-3e41-4681-82c8-0f66aeba199f" />
+
 
 ---
 
