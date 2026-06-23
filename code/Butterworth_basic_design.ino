@@ -1,5 +1,4 @@
 %%
-%Question 4 
 %2 main design specifications
 
 [x, f_sample] = audioread('Problem4_FDM_audio_input.wav');
@@ -20,7 +19,7 @@ echo on
 w_p = 2*pi*(f_p/f_sample)
 w_s = 2*pi*(f_2/f_sample)
 %%
-%Part A number 1
+
 %N and omega calculations
 T_d = 1;
 k = 2/T_d;
@@ -46,7 +45,7 @@ echo off
 
 Omega_range = linspace(0,3,1000);
 %%
-%Question 4 Part A number 2: 
+
 %solving for the gain adjusted H and solving for G
 echo on
 
@@ -79,7 +78,6 @@ grid on;
 
 legend('Filter', ['\Omega_n = ', num2str((omega_n), '%.4f')], ['\Omega_p = ', num2str(omega_p, '%.4f')],['\Omega_s = ', num2str(omega_s, '%.4f')]);
 %%
-%Question 4 Part A number 3 and 4
 %finding and plotting the poles
 
 %setting a cell array of poles
@@ -119,7 +117,6 @@ title('Figure 2: Laplace Butterworth poles of H(s)')
 xlabel('Real(s)')
 ylabel('Imaginary(s)')
 %%
-%Question 4 Part B number 1
 
 %using the bilinear equation
 K = 2; 
@@ -192,7 +189,6 @@ ylabel('h[n]')
 
 %%
 
-%Question 4 part c number 1
 K=2;
 w = 0:0.001: 2*pi;
 z = exp(1i*w);
@@ -250,7 +246,7 @@ yline(20*log10(0.9), 'r:', '-0.91 dB');
 yline(20*log10(0.01), 'k:', '-40 dB'); 
 
 %%
-%Part D
+
 
 
 [qn, f_sample] = audioread('Problem4_FDM_audio_input.wav');
@@ -275,7 +271,7 @@ audiowrite('FDM_lowpass_output.wav', yn_filtered, f_sample);
 
 
 %%
-%Question 4Part D 
+
 %ploting the output spectro in dB of XK
 
 f_0 = 10;
@@ -323,7 +319,7 @@ title('Figure 7: Engineers DFT X[k] for FDM (in dB mode)')
 axis([0 60 0 20E3]);
 caxis([-80 20]);
 %%
-%Question 4 Part D number 6
+
 disp('To clean up the audio more, i would increase the stopband width. This makes sure any leaked freqeuincies from other channels are even quieter.')
 
 disp('The new Butterworth filter design would have more poles. N would increase. The more poles means that the filter can go from passing the signal to blocking more noise.')
