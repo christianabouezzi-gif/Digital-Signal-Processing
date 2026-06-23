@@ -255,7 +255,9 @@ The filtered signal was translated back to baseband using
 $$
 x_{dem}[n]
 ==========
+$$
 
+$$
 x_{bp}[n]
 \cos(\omega_c n)
 $$
