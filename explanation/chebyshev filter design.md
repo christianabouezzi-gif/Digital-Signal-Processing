@@ -77,10 +77,9 @@ $$
 
 which yielded:
 
-[
-\epsilon =
-\sqrt{\frac{1}{(0.85)^2}-1}
-]
+$$
+\frac{1}{\sqrt{1+\epsilon^2}} = 1-\delta_1
+$$
 
 ---
 
