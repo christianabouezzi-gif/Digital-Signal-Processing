@@ -71,9 +71,9 @@ was selected.
 
 The Chebyshev ripple parameter ε was determined from:
 
-[
-\frac{1}{\sqrt{1+\epsilon^2}} = 1-\delta_1
-]
+$$
+\epsilon = \sqrt{\frac{1}{(0.85)^2}-1}
+$$
 
 which yielded:
 
