@@ -72,13 +72,14 @@ was selected.
 The Chebyshev ripple parameter ε was determined from:
 
 $$
-\epsilon = \sqrt{\frac{1}{(0.85)^2}-1}
+\frac{1}{\sqrt{1+\epsilon^2}} = 1-\delta_1
 $$
 
 which yielded:
 
 $$
-\frac{1}{\sqrt{1+\epsilon^2}} = 1-\delta_1
+\epsilon =
+\sqrt{\frac{1}{(0.85)^2}-1}
 $$
 
 ---
@@ -87,9 +88,9 @@ $$
 
 Digital-domain frequency specifications were converted into the Laplace domain using:
 
-[
+$$
 \Omega = K\tan\left(\frac{\omega}{2}\right)
-]
+$$
 
 with
 
@@ -115,12 +116,12 @@ Omega_s
 
 The theoretical magnitude response was evaluated using:
 
-[
+$$
 |H_{ideal}(\Omega)|=
 \frac{1}
 {\sqrt{1+\epsilon^2
 \left[T_N\left(\frac{\Omega}{\Omega_p}\right)\right]^2}}
-]
+$$
 
 The initial design failed to satisfy the stopband attenuation requirement.
 
@@ -156,33 +157,33 @@ This order provided sufficient attenuation at the stopband edge frequency.
 
 Using Chebyshev pole equations:
 
-[
+$$
 \beta=
 \left(
 \frac{\sqrt{1+\epsilon^2}+1}
 {\epsilon}
 \right)^{1/N}
-]
+$$
 
-[
+$$
 r_1=
 \Omega_p
 \frac{\beta^2+1}
 {2\beta}
-]
+$$
 
-[
+$$
 r_2=
 \Omega_p
 \frac{\beta^2-1}
 {2\beta}
-]
+$$
 
 Pole locations were computed from:
 
-[
+$$
 p_k=x_k+j y_k
-]
+$$
 
 and plotted in the Laplace domain.
 
@@ -198,11 +199,11 @@ and plotted in the Laplace domain.
 
 A gain correction factor was applied:
 
-[
+$$
 G=
 \frac{1}
 {\max(H(s))}
-]
+$$
 
 to normalize the filter's maximum gain to unity.
 
@@ -212,11 +213,11 @@ to normalize the filter's maximum gain to unity.
 
 The analog poles were converted into the digital domain using:
 
-[
+$$
 z=
 \frac{1+s/K}
 {1-s/K}
-]
+$$
 
 where:
 
@@ -260,15 +261,15 @@ The resulting response demonstrates the behavior of the designed IIR filter in t
 
 The filter was evaluated in the frequency domain using:
 
-[
+$$
 H(e^{j\omega})
-]
+$$
 
 with:
 
-[
+$$
 z=e^{j\omega}
-]
+$$
 
 ---
 
@@ -296,11 +297,11 @@ The phase plot illustrates the nonlinear phase characteristics typical of IIR fi
 
 The final design was displayed on a frequency axis in Hertz:
 
-[
+$$
 f=
 \frac{\omega}{2\pi}
 f_s
-]
+$$
 
 with:
 
