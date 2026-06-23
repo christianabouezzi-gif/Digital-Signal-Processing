@@ -36,7 +36,8 @@ The objective of this project was to:
 The noisy grayscale image:
 
 ```matlab
-Tay_Tay_BW_noisy_diagonal.tif
+![Uploading Tay_Tay_BW_noisy_diagonal copy.jpeg…]()
+
 ```
 
 contains periodic diagonal interference appearing as stripes across the image.
