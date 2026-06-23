@@ -36,8 +36,7 @@ The objective of this project was to:
 The noisy grayscale image:
 
 ```matlab
-![Uploading Tay_Tay_BW_noisy_diagonal copy.jpeg…]()
-
+Tay_Tay_BW_noisy_diagonal.jpeg
 ```
 
 contains periodic diagonal interference appearing as stripes across the image.
@@ -47,7 +46,8 @@ contains periodic diagonal interference appearing as stripes across the image.
 ## Figure 1
 **Original Noisy Image**
 
-[Tay_Tay_BW_noisy_diagonal.tif](https://github.com/user-attachments/files/29268069/Tay_Tay_BW_noisy_diagonal.tif)
+<img width="512" height="512" alt="Tay_Tay_BW_noisy_diagonal copy" src="https://github.com/user-attachments/assets/ca4d38d0-35dd-4cf2-8b79-4c50e8d3b25d" />
+
 
 
 The diagonal noise appears as repetitive high-frequency components distributed across the image.
@@ -108,7 +108,8 @@ $$
 ## Figure 2
 **2D Butterworth Frequency Response**
 
-*Insert Butterworth Filter Plot Here*
+<img width="655" height="519" alt="Screenshot 2026-06-23 at 5 24 23 PM" src="https://github.com/user-attachments/assets/96758e9b-cf0c-41f2-9a2a-937b32fb553b" />
+
 
 The Butterworth filter exhibits:
 
@@ -151,7 +152,8 @@ $$
 ## Figure 3
 **2D Chebyshev Frequency Response**
 
-*Insert Chebyshev Filter Plot Here*
+<img width="619" height="520" alt="Screenshot 2026-06-23 at 5 24 42 PM" src="https://github.com/user-attachments/assets/a480edde-9bc1-4974-a3b4-a3c44f4d113d" />
+
 
 Characteristics:
 
@@ -183,7 +185,8 @@ $$
 ## Figure 4
 **2D Gaussian Frequency Response**
 
-*Insert Gaussian Filter Plot Here*
+<img width="594" height="509" alt="Screenshot 2026-06-23 at 5 24 48 PM" src="https://github.com/user-attachments/assets/376c0c8d-ad56-4cb0-a1fd-fe2c03cce2a1" />
+
 
 Characteristics:
 
@@ -224,7 +227,8 @@ ifft2(ifftshift(Y))
 ## Figure 5
 **Filtered Image Results**
 
-*Insert Three-Panel Image Here*
+<img width="1016" height="337" alt="Screenshot 2026-06-23 at 5 24 57 PM" src="https://github.com/user-attachments/assets/af38e2c4-4630-4d4a-b7e8-85c9888cd8ac" />
+
 
 ### Left
 Butterworth Filter
@@ -288,7 +292,8 @@ The magnitude response of each filter was visualized across the two-dimensional 
 ## Figure 6
 **Magnitude Spectra |H(ωm,ωn)|**
 
-*Insert Three-Panel Frequency Response Plot Here*
+<img width="1013" height="296" alt="Screenshot 2026-06-23 at 5 25 12 PM" src="https://github.com/user-attachments/assets/d8ffbda2-c5a8-43da-a29d-930a30267b90" />
+
 
 This figure illustrates:
 
@@ -313,21 +318,24 @@ were displayed alongside the reconstructed images.
 ## Figure 7
 **Butterworth Spectrum and Output Image**
 
-*Insert Butterworth Yw + Image Figure Here*
+<img width="1079" height="472" alt="Screenshot 2026-06-23 at 5 25 30 PM" src="https://github.com/user-attachments/assets/29f46e68-9071-4fd3-808a-fff9a93e4db6" />
+
 
 ---
 
 ## Figure 8
 **Chebyshev Spectrum and Output Image**
 
-*Insert Chebyshev Yw + Image Figure Here*
+<img width="1031" height="462" alt="Screenshot 2026-06-23 at 5 25 39 PM" src="https://github.com/user-attachments/assets/9aadbb37-d12b-4248-aa75-666d084d7885" />
+
 
 ---
 
 ## Figure 9
 **Gaussian Spectrum and Output Image**
 
-*Insert Gaussian Yw + Image Figure Here*
+<img width="1083" height="464" alt="Screenshot 2026-06-23 at 5 25 49 PM" src="https://github.com/user-attachments/assets/415ed6b7-7348-4983-9c07-3b9309602b02" />
+
 
 ---
 
